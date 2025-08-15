@@ -108,17 +108,17 @@ const Hero: React.FC = () => {
             <div className="text-green-400 mb-2">
               <span className="text-gray-500">$</span> whoami
             </div>
-            <div className="text-white mb-4">John Doe - Full Stack Developer</div>
+            <div className="text-white mb-4">Ashish Kumar Singh</div>
             
             <div className="text-green-400 mb-2">
               <span className="text-gray-500">$</span> cat profile.json
             </div>
             <div className="text-gray-300 mb-4 bg-gray-900 p-4 rounded border-l-4 border-primary-500">
               <div className="text-yellow-400">&#123;</div>
-              <div className="ml-4 text-blue-400">"name"<span className="text-gray-400">:</span> <span className="text-green-300">"John Doe"</span>,</div>
-              <div className="ml-4 text-blue-400">"role"<span className="text-gray-400">:</span> <span className="text-green-300">"Full Stack Developer"</span>,</div>
-              <div className="ml-4 text-blue-400">"location"<span className="text-gray-400">:</span> <span className="text-green-300">"San Francisco, CA"</span>,</div>
-              <div className="ml-4 text-blue-400">"skills"<span className="text-gray-400">:</span> [<span className="text-green-300">"React"</span>, <span className="text-green-300">"Node.js"</span>, <span className="text-green-300">"Python"</span>],</div>
+              <div className="ml-4 text-blue-400">"name"<span className="text-gray-400">:</span> <span className="text-green-300">"Ashish Kumar Singh"</span>,</div>
+              <div className="ml-4 text-blue-400">"role"<span className="text-gray-400">:</span> <span className="text-green-300">"Software Engineer"</span>,</div>
+              <div className="ml-4 text-blue-400">"location"<span className="text-gray-400">:</span> <span className="text-green-300">"Greater Noida"</span>,</div>
+              <div className="ml-4 text-blue-400">"skills"<span className="text-gray-400">:</span> [<span className="text-green-300">"CPP"</span>, <span className="text-green-300">""</span>, <span className="text-green-300">"Python"</span>],</div>
               <div className="ml-4 text-blue-400">"status"<span className="text-gray-400">:</span> <span className="text-green-300">"Available for hire"</span></div>
               <div className="text-yellow-400">&#125;</div>
             </div>
