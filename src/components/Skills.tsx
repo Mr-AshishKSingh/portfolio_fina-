@@ -5,17 +5,16 @@ import { Terminal, Code, Database } from 'lucide-react';
 const Skills: React.FC = () => {
   const skillCategories = [
     {
-      title: 'Frontend Development',
+      title: 'Android Development',
       icon: Code,
       color: 'text-blue-400',
       bgColor: 'bg-blue-400/10',
       borderColor: 'border-blue-400/30',
       skills: [
-        { name: 'React.js', level: 90, command: 'npx create-react-app' },
-        { name: 'TypeScript', level: 85, command: 'tsc --init' },
-        { name: 'Next.js', level: 80, command: 'npx create-next-app' },
-        { name: 'Tailwind CSS', level: 95, command: 'npm install tailwindcss' },
-        { name: 'Vue.js', level: 75, command: 'npm create vue@latest' }
+        { name: 'Flutter', level: 70, command: 'flutter create new' },
+        { name: 'Dart', level: 85, command: 'tsc --init' },
+        { name: 'Firebase', level: 80, command: 'initialize app() ' },
+        
       ]
     },
     {
@@ -25,11 +24,10 @@ const Skills: React.FC = () => {
       bgColor: 'bg-green-400/10',
       borderColor: 'border-green-400/30',
       skills: [
-        { name: 'Node.js', level: 85, command: 'node server.js' },
-        { name: 'Python', level: 80, command: 'python main.py' },
-        { name: 'Express.js', level: 90, command: 'npm install express' },
-        { name: 'PostgreSQL', level: 75, command: 'psql -U postgres' },
-        { name: 'MongoDB', level: 85, command: 'mongod --dbpath' }
+        { name: 'Firebase', level: 85, command: 'initialize app()' },
+        { name: 'SQL', level: 80, command: 'select from table' },
+        { name: 'Redis', level: 90, command: 'SET key value' },
+    
       ]
     },
     {
@@ -168,7 +166,7 @@ const Skills: React.FC = () => {
           
           <div className="font-mono text-sm">
             <div className="text-purple-400">const <span className="text-blue-400">developer</span> = &#123;</div>
-            <div className="ml-4 text-green-400">name: <span className="text-yellow-300">'John Doe'</span>,</div>
+            <div className="ml-4 text-green-400">name: <span className="text-yellow-300">'Ashish Kumar Singjh'</span>,</div>
             <div className="ml-4 text-green-400">passion: <span className="text-yellow-300">'Creating amazing digital experiences'</span>,</div>
             <div className="ml-4 text-green-400">motto: <span className="text-yellow-300">'Code, Learn, Repeat'</span>,</div>
             <div className="ml-4 text-green-400">getCurrentStatus(): <span className="text-blue-400">string</span> &#123;</div>

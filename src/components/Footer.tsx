@@ -15,11 +15,10 @@ const Footer: React.FC = () => {
           {/* Brand & Description */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-              John Doe
+             Ashish Kumar Singh
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Passionate full-stack developer creating beautiful and functional 
-              digital experiences with modern technologies.
+              
             </p>
           </div>
 
@@ -49,9 +48,9 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold">Connect With Me</h4>
             <div className="flex space-x-4">
               {[
-                { icon: Github, href: '#', label: 'GitHub' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Mail, href: 'mailto:john@example.com', label: 'Email' }
+                { icon: Github, href: 'https://github.com/Mr-AshishKSingh', label: 'GitHub' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/ashish-kumar-singh-b1ab641a5/', label: 'LinkedIn' },
+                { icon: Mail, href: 'mailto:officialwork.ashish@gmail.com', label: 'Email' }
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -71,23 +70,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm flex items-center">
-              © {currentYear} John Doe. Made with{' '}
-              <Heart className="w-4 h-4 text-red-500 mx-1" />{' '}
-              and lots of coffee.
-            </p>
-            
-            <button
-              onClick={scrollToTop}
-              className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-300 text-sm font-medium"
-            >
-              Back to Top
-            </button>
-          </div>
-        </div>
       </div>
     </footer>
   );

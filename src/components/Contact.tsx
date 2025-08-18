@@ -86,19 +86,19 @@ const Contact: React.FC = () => {
                     {
                       icon: Mail,
                       command: 'echo $EMAIL',
-                      output: 'john@example.com',
-                      href: 'mailto:john@example.com'
+                      output: 'officialwork.ashish@gmail.com',
+                      href: 'mailto:officialwork.ashish@gmail.com'
                     },
                     {
                       icon: Phone,
                       command: 'echo $PHONE',
-                      output: '+1 (555) 123-4567',
-                      href: 'tel:+15551234567'
+                      output: '+91 7457008912',
+                      href: 'tel:+91 7457008912'
                     },
                     {
                       icon: MapPin,
                       command: 'curl -s ipinfo.io/city',
-                      output: 'San Francisco, CA',
+                      output: 'Greater Noida',
                       href: '#'
                     },
                     {

@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   const [text, setText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
   
-  const fullText = "console.log('Hello, World! I\\'m a Full-Stack Developer');";
+  const fullText = "cout << Hello !!;";
   
   useEffect(() => {
     let index = 0;
@@ -161,10 +161,10 @@ const Hero: React.FC = () => {
           className="flex items-center justify-center space-x-6"
         >
           {[
-            { icon: Github, href: '#', label: 'GitHub', command: 'git clone' },
-            { icon: Linkedin, href: '#', label: 'LinkedIn', command: 'curl -L' },
-            { icon: Mail, href: 'mailto:john@example.com', label: 'Email', command: 'sendmail' },
-            { icon: Coffee, href: '#', label: 'Coffee Chat', command: 'brew install' }
+            { icon: Github, href: 'https://github.com/Mr-AshishKSingh', label: 'GitHub', command: 'git clone' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/ashish-kumar-singh-b1ab641a5/', label: 'LinkedIn', command: 'curl -L' },
+            { icon: Mail, href: 'mailto:officialwork.ashish@gmail.com', label: 'Email', command: 'sendmail' },
+        
           ].map(({ icon: Icon, href, label, command }) => (
             <motion.a
               key={label}

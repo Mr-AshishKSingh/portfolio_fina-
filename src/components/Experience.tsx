@@ -6,74 +6,62 @@ const Experience: React.FC = () => {
   const experiences = [
     {
       id: 1,
-      title: 'Senior Full-Stack Developer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
-      description: 'Leading development of scalable web applications using React, Node.js, and AWS. Mentoring junior developers and architecting microservices solutions.',
+      title: 'Developer Relation',
+      company: 'Mphasis',
+      location: 'Delhi',
+      period: '2025 - Present',
+      description: 'Building a strong bridge between a company (or project) and the developer community.',
       achievements: [
         'Led a team of 5 developers in rebuilding the main platform',
         'Improved application performance by 40%',
         'Implemented CI/CD pipelines reducing deployment time by 60%'
       ],
-      technologies: ['React', 'Node.js', 'AWS', 'TypeScript', 'Docker'],
+      technologies: [ 'AWS',  'Docker'],
       website: '#',
-      commits: '2,847',
-      repositories: '23',
-      command: 'git log --author="john.doe" --oneline | wc -l'
+      command: 'git log --author="ashish.singh" --oneline | wc -l'
     },
     {
       id: 2,
-      title: 'Full-Stack Developer',
-      company: 'StartupXYZ',
+      title: 'Hackathon Organiser FOSS HACK 5.0',
+      company: 'FossUnited',
       location: 'Remote',
-      period: '2021 - 2022',
-      description: 'Developed and maintained multiple client projects using modern web technologies. Collaborated with designers and product managers to deliver high-quality solutions.',
+      period: 'Feb - 2025',
+      description: 'Organized OpenSource Hackathon',
       achievements: [
-        'Built 8+ responsive web applications from scratch',
-        'Reduced client onboarding time by 50%',
-        'Implemented automated testing increasing code coverage to 85%'
+        'Served as a hackathon organizer'
       ],
-      technologies: ['Vue.js', 'Python', 'PostgreSQL', 'Django'],
+      technologies: ['Team Management' , ' Fund Management ' , ' Stage management'],
       website: '#',
-      commits: '1,923',
-      repositories: '18',
-      command: 'npm run build && npm test -- --coverage'
+      command: 'hackathon organizer'
     },
     {
       id: 3,
-      title: 'Frontend Developer',
-      company: 'Digital Agency Inc',
-      location: 'New York, NY',
-      period: '2020 - 2021',
-      description: 'Specialized in creating interactive user interfaces and responsive websites for various clients across different industries.',
+      title: 'Campus Ambassador - IIT BOMBAY',
+      company: 'IIT Bombay',
+      location: 'Remote',
+      period: 'Aug 2024 - Sept 2024',
+      description: 'Worked as Campus Ambassador , helped in promoting about the ECELL of IIT Bombay',
       achievements: [
-        'Delivered 15+ client projects on time and within budget',
-        'Improved website loading speeds by 35% on average',
-        'Introduced modern development workflows to the team'
+        'Being in the list of top 50 Ambassador out of 2400'
       ],
-      technologies: ['JavaScript', 'React', 'SASS', 'Webpack'],
+      technologies: ['Public Realtion ' , 'Task management'],
       website: '#',
-      commits: '1,456',
-      repositories: '15',
       command: 'webpack --mode=production --optimize-minimize'
     },
     {
       id: 4,
-      title: 'Junior Web Developer',
-      company: 'WebDev Studio',
-      location: 'Los Angeles, CA',
-      period: '2019 - 2020',
-      description: 'Started my professional journey building websites and learning modern development practices while working on diverse projects.',
+      title: 'Campus Ambassador - FOSS HACK',
+      company: 'FossUnited',
+      location: 'Remote',
+      period: 'Jul 2024 ',
+      description: 'Managed Public Relation , helped in promoting Hackathon',
       achievements: [
-        'Contributed to 10+ successful website launches',
+       
         'Learned and implemented responsive design principles',
         'Collaborated effectively in an agile development environment'
       ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'PHP'],
+      technologies: ['PR' , 'Public Promotion'],
       website: '#',
-      commits: '834',
-      repositories: '12',
       command: 'php -S localhost:8000 index.php'
     }
   ];
@@ -167,21 +155,6 @@ const Experience: React.FC = () => {
                           <MapPin size={12} />
                           <span>{experience.location}</span>
                         </span>
-                      </div>
-                    </div>
-
-                    {/* Git Stats */}
-                    <div className="mb-4 bg-gray-800 p-3 rounded border-l-4 border-green-500">
-                      <div className="text-green-400 text-sm mb-2">
-                        <span className="text-gray-500">$</span> git log --oneline --stat
-                      </div>
-                      <div className="grid grid-cols-2 gap-4 text-xs">
-                        <div className="text-gray-300">
-                          <span className="text-yellow-400">Commits:</span> {experience.commits}
-                        </div>
-                        <div className="text-gray-300">
-                          <span className="text-blue-400">Repos:</span> {experience.repositories}
-                        </div>
                       </div>
                     </div>
 

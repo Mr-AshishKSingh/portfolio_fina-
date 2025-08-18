@@ -1,50 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Folder, Star, GitBranch, Eye, Code } from 'lucide-react';
+import { ExternalLink, Github, Folder, Star, GitBranch } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.',
-      repository: 'ecommerce-platform',
+      title: 'Cook Book',
+      description: 'Cookbook is a Flutter-based mobile application that connects users seeking home-cooked meals with local cooks. The app allows users to post their cooking needs, browse and book cooks, while cooks can register, manage their profiles, and accept job requests.',
+      repository: 'https://github.com/Mr-AshishKSingh/COOKBOOK',
       branch: 'main',
-      language: 'TypeScript',
-      stars: 234,
-      forks: 47,
-      lastCommit: '2 days ago',
+      language: 'Flutter , Dart',
+      stars: 2,
+      forks: 0,
+      lastCommit: '2 months ago',
       status: 'active',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      githubUrl: '#',
+      technologies: ['Flutter' , ' Dart ' ,' Firebase '],
+      githubUrl: 'https://github.com/Mr-AshishKSingh/COOKBOOK',
       liveUrl: '#',
-      featured: true,
-      codeStats: {
-        lines: 15420,
-        commits: 156,
-        contributors: 3
-      }
+      featured: true
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      repository: 'task-manager-pro',
+      title: 'clipboard_extension',
+      description: 'A modern, sleek browser extension that tracks and manages your clipboard history with an intuitive interface. Never lose important copied text again!',
+      repository: 'https://github.com/Mr-AshishKSingh/clipboard_extension',
       branch: 'main',
       language: 'JavaScript',
-      stars: 189,
-      forks: 32,
-      lastCommit: '5 days ago',
+      stars: 1,
+      forks: 0,
+      lastCommit: '2 Months ago',
       status: 'active',
-      technologies: ['Vue.js', 'Express.js', 'MongoDB', 'Socket.io'],
-      githubUrl: '#',
+      technologies: ['JS' , 'CSS' , "HTML"],
+      githubUrl: 'https://github.com/Mr-AshishKSingh/clipboard_extension',
       liveUrl: '#',
-      featured: true,
-      codeStats: {
-        lines: 12340,
-        commits: 98,
-        contributors: 2
-      }
+      featured: true
     },
     {
       id: 3,
@@ -60,12 +50,7 @@ const Projects: React.FC = () => {
       technologies: ['React', 'TypeScript', 'Chart.js', 'Weather API'],
       githubUrl: '#',
       liveUrl: '#',
-      featured: false,
-      codeStats: {
-        lines: 5670,
-        commits: 45,
-        contributors: 1
-      }
+      featured: false
     },
     {
       id: 4,
@@ -81,12 +66,7 @@ const Projects: React.FC = () => {
       technologies: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
       githubUrl: '#',
       liveUrl: '#',
-      featured: false,
-      codeStats: {
-        lines: 3420,
-        commits: 67,
-        contributors: 1
-      }
+      featured: false
     },
     {
       id: 5,
@@ -102,12 +82,7 @@ const Projects: React.FC = () => {
       technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'Markdown'],
       githubUrl: '#',
       liveUrl: '#',
-      featured: false,
-      codeStats: {
-        lines: 8750,
-        commits: 123,
-        contributors: 2
-      }
+      featured: false
     },
     {
       id: 6,
@@ -123,17 +98,11 @@ const Projects: React.FC = () => {
       technologies: ['React', 'D3.js', 'Python', 'FastAPI'],
       githubUrl: '#',
       liveUrl: '#',
-      featured: false,
-      codeStats: {
-        lines: 9870,
-        commits: 89,
-        contributors: 2
-      }
+      featured: false
     }
   ];
 
   const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
 
   return (
     <section id="projects" className="py-20 bg-gray-900">
@@ -203,10 +172,7 @@ const Projects: React.FC = () => {
                       <GitBranch size={12} className="text-blue-400" />
                       <span className="text-gray-300">{project.forks}</span>
                     </div>
-                    <div className="flex items-center space-x-1">
-                      <Eye size={12} className="text-green-400" />
-                      <span className="text-gray-300">{project.codeStats.lines} lines</span>
-                    </div>
+
                   </div>
                   <span className="text-gray-500">Last commit: {project.lastCommit}</span>
                 </div>
@@ -240,22 +206,6 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Git Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-4 p-3 bg-gray-900 rounded border border-gray-700">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-green-400 font-mono">{project.codeStats.commits}</div>
-                    <div className="text-xs text-gray-400 font-mono">commits</div>
-                  </div>
-                  <div className="text-center border-l border-r border-gray-700">
-                    <div className="text-lg font-bold text-blue-400 font-mono">{project.codeStats.contributors}</div>
-                    <div className="text-xs text-gray-400 font-mono">contributors</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-yellow-400 font-mono">{(project.codeStats.lines / 1000).toFixed(1)}k</div>
-                    <div className="text-xs text-gray-400 font-mono">lines</div>
-                  </div>
-                </div>
-
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
@@ -274,14 +224,12 @@ const Projects: React.FC = () => {
                     <div className="text-green-400 mb-1">
                       <span className="text-gray-500">$</span> git clone {project.repository}.git
                     </div>
-                    <div className="text-gray-400">
-                      <span className="text-gray-500">$</span> cd {project.repository} && npm install
-                    </div>
+                  
                   </div>
                   
                   <div className="flex space-x-2">
                     <a
-                      href={project.githubUrl}
+                      href={project.repository}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 flex items-center justify-center space-x-2 py-2 bg-gray-700 hover:bg-gray-600 rounded font-mono text-sm transition-colors border border-gray-600 hover:border-gray-500"
@@ -305,142 +253,59 @@ const Projects: React.FC = () => {
           ))}
         </div>
 
-        {/* Other Repositories */}
+        {/* GitHub Profile Link */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center"
         >
           <h3 className="text-3xl font-bold text-white mb-4 font-mono">
-            <span className="text-gray-500">~/dev/</span>other-projects<span className="text-yellow-400">:</span>
+            <span className="text-gray-500">~/dev/</span>more-projects<span className="text-yellow-400">:</span>
           </h3>
-          <div className="flex justify-center">
-            <div className="bg-gray-800 px-3 py-1 rounded border border-gray-600 font-mono text-sm">
-              <span className="text-green-400">$</span> <span className="text-white">ls -la | grep -v featured</span>
-            </div>
-          </div>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {otherProjects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-700"
-            >
-              {/* Terminal Header */}
-              <div className="flex items-center justify-between bg-gray-900 px-3 py-2 border-b border-gray-700">
-                <div className="flex items-center space-x-2">
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  </div>
-                  <Folder size={12} className="text-blue-400" />
-                  <span className="text-white font-mono text-xs truncate">{project.repository}</span>
-                </div>
-                <div className="text-xs text-gray-400 font-mono">{project.language}</div>
-              </div>
-
-              {/* Repository Stats */}
-              <div className="bg-gray-800 px-3 py-1 border-b border-gray-700">
-                <div className="flex items-center justify-between text-xs font-mono">
-                  <div className="flex space-x-3">
-                    <div className="flex items-center space-x-1">
-                      <Star size={10} className="text-yellow-400" />
-                      <span className="text-gray-300">{project.stars}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <GitBranch size={10} className="text-blue-400" />
-                      <span className="text-gray-300">{project.forks}</span>
-                    </div>
-                  </div>
-                  <span className="text-gray-500">{project.lastCommit}</span>
-                </div>
-              </div>
-
-              {/* Code Preview */}
-              <div className="bg-gray-900 p-3 border-b border-gray-700 font-mono text-xs">
-                <div className="text-gray-500 mb-1"># {project.title}</div>
-                <div className="text-gray-300 line-clamp-2">{project.description}</div>
-              </div>
-
-              {/* Project Content */}
-              <div className="p-4">
-                <div className="flex items-center justify-between mb-3">
-                  <h4 className="text-lg font-bold text-white font-mono truncate">{project.title}</h4>
-                  <div className={`px-2 py-1 rounded text-xs font-mono ${
-                    project.status === 'active' 
-                      ? 'bg-green-900 text-green-400' 
-                      : 'bg-blue-900 text-blue-400'
-                  }`}>
-                    {project.status}
-                  </div>
-                </div>
-
-                {/* Git Stats */}
-                <div className="grid grid-cols-3 gap-2 mb-3 p-2 bg-gray-900 rounded border border-gray-700">
-                  <div className="text-center">
-                    <div className="text-sm font-bold text-green-400 font-mono">{project.codeStats.commits}</div>
-                    <div className="text-xs text-gray-400 font-mono">commits</div>
-                  </div>
-                  <div className="text-center border-l border-r border-gray-700">
-                    <div className="text-sm font-bold text-blue-400 font-mono">{project.codeStats.contributors}</div>
-                    <div className="text-xs text-gray-400 font-mono">contributors</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-sm font-bold text-yellow-400 font-mono">{(project.codeStats.lines / 1000).toFixed(1)}k</div>
-                    <div className="text-xs text-gray-400 font-mono">lines</div>
-                  </div>
-                </div>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-1 mb-3">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1 bg-gray-700 text-green-400 rounded text-xs font-mono border border-gray-600"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <span className="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs border border-gray-600 font-mono">
-                      +{project.technologies.length - 3}
-                    </span>
-                  )}
-                </div>
-
-                {/* Terminal Actions */}
+          
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="max-w-2xl mx-auto bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700"
+          >
+            <div className="flex items-center justify-between bg-gray-900 px-4 py-3 border-b border-gray-700">
+              <div className="flex items-center space-x-2">
                 <div className="flex space-x-1">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center space-x-1 py-1 bg-gray-700 hover:bg-gray-600 rounded font-mono text-xs transition-colors border border-gray-600"
-                  >
-                    <Code size={12} className="text-gray-300" />
-                    <span className="text-gray-300">Code</span>
-                  </a>
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center space-x-1 py-1 bg-green-800 hover:bg-green-700 rounded font-mono text-xs transition-colors border border-green-700"
-                  >
-                    <ExternalLink size={12} className="text-green-300" />
-                    <span className="text-green-300">Demo</span>
-                  </a>
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                </div>
+                <Github size={16} className="text-blue-400 ml-2" />
+                <span className="text-white font-mono text-sm">github.com</span>
+              </div>
+            </div>
+
+            <a
+              href="https://github.com/Mr-AshishKSingh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-6 hover:bg-gray-750 transition-colors"
+            >
+              <div className="flex items-center justify-center space-x-4 mb-4">
+                <Github size={40} className="text-green-400" />
+                <div className="text-left">
+                  <h4 className="text-xl font-bold text-white font-mono">View My GitHub Profile</h4>
+                  <p className="text-gray-400 font-mono text-sm">@Mr-AshishKSingh</p>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
+              
+              <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
+                <p className="text-gray-300 text-sm font-mono">
+                  <span className="text-green-400">$</span> Check out more of my projects and contributions on GitHub!
+                </p>
+                <p className="text-gray-500 text-xs font-mono mt-2">
+                  # Discover my open-source work, experiments, and coding journey
+                </p>
+              </div>
+            </a>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Code, Coffee, GitBranch, Database } from 'lucide-react';
+import { Terminal, Code, Coffee, GitBranch, Database, Star } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -54,7 +54,7 @@ const About: React.FC = () => {
                   </div>
                   <div className="relative">
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+                      src="https://avatars.githubusercontent.com/u/110713754?v=4"
                       alt="Developer Profile"
                       className="w-48 h-48 mx-auto rounded-lg border-2 border-green-400 shadow-lg"
                     />
@@ -69,7 +69,7 @@ const About: React.FC = () => {
                   </div>
                   <div className="ml-4 space-y-1 text-gray-300">
                     <div><span className="text-blue-400">OS:</span> Developer v2024.8</div>
-                    <div><span className="text-blue-400">Uptime:</span> 5+ years of coding</div>
+                    <div><span className="text-blue-400">Uptime:</span> 3+ years of coding</div>
                     <div><span className="text-blue-400">Status:</span> <span className="text-green-400">Active & Learning</span></div>
                     <div><span className="text-blue-400">Location:</span> ~/home/passionate_coder</div>
                   </div>
@@ -112,7 +112,7 @@ const About: React.FC = () => {
                     </div>
                     <div className="ml-4 space-y-1 text-gray-300">
                       <div><span className="text-red-400">this</span>.<span className="text-green-400">name</span> = <span className="text-orange-400">"Passionate Developer"</span>;</div>
-                      <div><span className="text-red-400">this</span>.<span className="text-green-400">experience</span> = <span className="text-orange-400">"5+ years"</span>;</div>
+                      <div><span className="text-red-400">this</span>.<span className="text-green-400">experience</span> = <span className="text-orange-400">"3+ Years"</span>;</div>
                       <div><span className="text-red-400">this</span>.<span className="text-green-400">passion</span> = <span className="text-orange-400">"Clean Code & Innovation"</span>;</div>
                       <div><span className="text-red-400">this</span>.<span className="text-green-400">status</span> = <span className="text-orange-400">"Always Learning"</span>;</div>
                     </div>
@@ -127,7 +127,11 @@ const About: React.FC = () => {
             <div className="bg-gray-800 p-4 rounded border border-gray-700 font-mono text-sm">
               <div className="text-gray-500 mb-2"># About This Developer</div>
               <div className="text-gray-300 space-y-2">
-                <p>Specialized in creating modern, responsive applications that deliver exceptional user experiences. Passionate about clean code, innovative solutions, and continuous learning.</p>
+                <p>I am a Computer Science Engineering student at Galgotias University with a passion for 
+software development and open-source initiatives. Skilled in CPP, Java, Flutter, and design
+ tools, I have experience in organizing hackathons, database engineering, and building 
+innovative projects like the Google Gemini App prototype, a Chat App, and a QR Scanner.
+ I thrive in collaborative environments and am committed to creating impactful tech solutions</p>
                 <p className="text-blue-400"># When not coding:</p>
                 <p>Exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community.</p>
               </div>
@@ -136,9 +140,9 @@ const About: React.FC = () => {
             {/* Stats Grid */}
             <div className="grid sm:grid-cols-3 gap-4">
               {[
-                { icon: Coffee, title: 'Experience', value: '5+ Years', command: 'uptime' },
-                { icon: GitBranch, title: 'Projects', value: '50+ Repos', command: 'git log --oneline | wc -l' },
-                { icon: Database, title: 'Commits', value: '1000+', command: 'git shortlog -s -n' }
+                { icon: Coffee, title: 'Experience', value: '1+ Years', command: 'uptime' },
+                { icon: Star, title: 'Total Starts', value: '113', command: 'git log --oneline | wc -l' },
+                { icon: Database, title: 'Commits', value: '654', command: 'git shortlog -s -n' }
               ].map(({ icon: Icon, title, value, command }) => (
                 <motion.div
                   key={title}
