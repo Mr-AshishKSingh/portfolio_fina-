@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Code, Coffee, GitBranch, Database, Star } from 'lucide-react';
+import { Terminal, Code, Coffee, Database, Star } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
